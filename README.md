@@ -7,7 +7,7 @@
 </p>
 
 # Run-Run 🚗
-> This is a full stack React Nodejs project.
+> This is a full stack React & Nodejs project.
 
 ## Quick Start
 
