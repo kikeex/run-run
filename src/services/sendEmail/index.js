@@ -1,21 +1,21 @@
-const sgMail = require('@sendgrid/mail');
+const sgMail = require('@sendgrid/mail')
 const { logger } = require('../../utils')
 
-const sendEmail = async (req, res) => {
-  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+const sendEmail = async (to, name, phone, text) => {
+  sgMail.setApiKey(process.env.SENDGRID_API_KEY)
   const msg = {
-    to: 'contacto@run-run.co',
+    to,
     from: 'contacto@run-run.co',
-    subject: 'Jose está buscando bombas de agua',
-    text: 'José está buscando bombas de agua para Chevrolet, contáctalo!',
-    html: '<strong>3004928614</strong>',
-  };
+    subject: `${name} está buscando algo`,
+    text: `${name} está buscando: ${text}, ¡Contactalo! `,
+    html: '<strong>https://Run-Run.co</strong>'
+  }
   sgMail.send(msg).then(() => {
     logger.info('¡Mensaje enviado de forma éxitosa!')
-    res.send(200)
+    return true
   }).catch((error) => {
-    console.error(error.response.body.errors[0].message)
-})
+    return error
+  })
 }
 
 module.exports = {
