@@ -7,8 +7,8 @@ const sendEmail = async (to, name, phone, text) => {
     to,
     from: 'contacto@run-run.co',
     subject: `${name} está buscando algo`,
-    text: `${name} está buscando: ${text}, ¡Contactalo! `,
-    html: '<strong>https://Run-Run.co</strong>'
+    text: `${name} está buscando: ${text}, ¡Contáctalo! ${phone} `,
+    html: `${name} está buscando: ${text}, ¡Contáctalo! ${phone} `
   }
   sgMail.send(msg).then(() => {
     logger.info('¡Mensaje enviado de forma éxitosa!')

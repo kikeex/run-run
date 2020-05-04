@@ -33,9 +33,9 @@ async function search (req, res) {
                     return res.status(500).send({ msg: 'No existen empresas registradas para esa búsqueda' })
                   }
                   try {
-                    userName = resultUser[0].firstName + resultUser[0].lastName
+                    userName = resultUser[0].firstName + ' ' + resultUser[0].lastName
                     sendEmail(resultCompany[0].email, userName, resultUser[0].phone, search)
-                    return res.status(200).send({ msg: `Hemos enviado tu solicitudad a: ${resultManufacturerCompany.length} compañías` })
+                    return res.status(200).send({ msg: `Hemos enviado tu solicitudad a: ${resultManufacturerCompany.length} compañía/s` })
                   } catch (err) {
                     return res.status(500).send({ err })
                   }
