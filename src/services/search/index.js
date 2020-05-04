@@ -23,7 +23,7 @@ async function search (req, res) {
     if (err) {
       return res.status(500).send({ err })
           }
-  const sqlCompany = 'select * from Company WHERE id = ?'
+  const sqlCompany = 'select * from Company WHERE id = ? AND status = 1'
     connection.query(sqlCompany, resultManufacturerCompany[0].companyId,
       (err, resultCompany) => {
   if (err) {

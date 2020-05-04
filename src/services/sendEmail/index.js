@@ -6,7 +6,7 @@ const sendEmail = async (to, name, phone, text) => {
   const msg = {
     to,
     from: 'contacto@run-run.co',
-    subject: `${name} está buscando algo`,
+    subject: `${name} está buscando ${text}`,
     text: `${name} está buscando: ${text}, ¡Contáctalo! ${phone} `,
     html: `${name} está buscando: ${text}, ¡Contáctalo! ${phone} `
   }
