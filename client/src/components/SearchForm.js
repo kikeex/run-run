@@ -19,7 +19,7 @@ import https from 'https';
         search,
         document: 744958
       };
-      const res = await axios.post('http://localhost:5000/search', obj)
+      const res = await axios.post(process.env.REACT_APP_API_URL+'/search', obj)
       setMessage(res.data.msg);
     } catch (err) {
     if (err.response.status === 500) {
