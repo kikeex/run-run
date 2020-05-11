@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+body {
+background-color: #000;
+}
+
+.space-input {
+  margin-bottom:0px;
+}
+
+.logo-image {
+  width:120px;
+  height:120px;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Shadows Into Light';
+}
+
+.appContainer {
+  background-color: #000;
+  font-family: 'Shadows Into Light';
+}
+
+.space-input {
+  background-color: white;
+}
+
+.btn-danger {
+    background-color: red;
+    border-color: red;
+}
+
+.alert,
+.alert-info,
+.alert-dismissible {
+  background-color: red;
+  color: white;
+  border-color: red;
+}
